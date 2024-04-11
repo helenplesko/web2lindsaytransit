@@ -240,7 +240,6 @@ p, ul, ol {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	overflow: hidden;
 }
 
 /* Customization of h1 element in banner class */
@@ -264,6 +263,13 @@ img {
 	max-width: 100%;   
 	height: auto;
 }	
+.builder img{
+	width:624px;
+	height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* Responsive design if the browser window is 600px or smaller */
 @media screen and (max-width: 600px) {
