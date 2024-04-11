@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>AHRS Transportation</title>
+	<title>Solution</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/mystyle.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -37,8 +37,8 @@
 		<div class="bar2"></div>
 		<div class="bar3"></div>
 	  </div>
-	<a href="index.html" class="active">Home</a>
-	<a href="solution.html">Solution</a>
+	<a href="index.html">Home</a>  
+	<a href="solution.html" class="active">Solution</a>
 	<div class="dropdown">
 		<button class="dropbtn">Attempts</button>
 		<!-- Attempts dropdown menu content -->
@@ -46,7 +46,6 @@
 			<a href="dashboard.html">ArcGIS Dashboard</a>
 			<a href="sdk.html">SDK</a>
 			<a href="leaflet.html">Leaflet</a>
-			<a href="data.html">Data Source</a>
 			<a href="osm.html">OSM</a>
 			<a href="mapbox.html">Mapbox</a>
 		</div> 
@@ -59,30 +58,64 @@
 <script src="js/javascript.js"></script>
 
 <div class="banner">
-	<h1>Public Transit Routing in Lindsay, Ontario</h1>
+	<h1>Our Solution<h1>
 </div>
 
 <hr class="rounded">
 
-<!-- Problem Statement Section -->
-<div class="problemstatement">
-	<h2>Problem Statement</h2>
-	
-	<h3>Ideal</h3>
-	<p>In an ideal world, people living and visiting Lindsay, Ontario, would have access to a user-friendly public web application that will help them navigate around the city via public transit.</p>
-	
-	<h3>Reality</h3>
-	<p>At the moment, members of this rural community do not have quick access to public transit routes on common navigation apps like Google Maps. They must rely on prior knowledge, word-of-mouth, or static maps to help them reach their destination instead.</p>
-	
-	<h3>Consequences</h3>
-	<p>If a solution to this is not found, the user may end up using out-of-date transit route information, get lost, miss their bus, or take a bus heading in a different direction.</p>
-	
-	<h3>Proposal</h3>
-	<p>To solve the problem, AHRS Transportation is exploring various web technologies and finding the best one that will help make a user-friendly web application that will help the general public navigate rural areas like Lindsay using public transit.</p>
-	
-	<h3>Technology Explored</h3>
-	<p>ArcGIS Experience Builder, ArcGIS Dashboard, ArcGIS SDK, Leaflet, Ontario Street Map, Mapbox</p>
+<div class="pageintro">
+    <h2>Our solution includes ArcGIS Experience Builder. Here's our methodology:</h2>
+	<h3> Creating a Template: </h3>
 </div>
+<div class="builder">
+	<h3> GTFS Data</h3>
+	<a href="https://gtfs.org/">GTFS data</a>
+
+	<p> • First to know about the routing features we should know about the raw data we collected this acts as the data tier for us 
+		and the middle and web tier would be the ESRI Experience builder.</p>
+
+	<p> • General Transit Feed Specifications are the raw data for all the transits along the world, this is a common form of transit data which can be shared among the stake holders and 
+		it contains all the necessary data which we want to represent a routing feature.
+	</p>
+
+</div>
+
+<table>
+	<tr>
+		<th>Advantages</th>
+		<th>Disadvantages</th>
+	</tr>
+	<tr>
+		<td>Many templates to choose from</td>
+		<td>Can be time consuming to create</td>
+	</tr>
+	<tr>
+		<td>Tied to AGOL organization account</td>
+		<td>Moving items around the page can be finicky</td>
+	</tr>
+	<tr>
+		<td>Can customize the theme/look</td>
+		<td>Cannot easily move the published experiences between accounts</td>
+	</tr>
+	<tr>
+		<td>No coding involved</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>It will automatically update for different screen sizes</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Can integrate with other apps, like Dashboards and Surveys</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Can add triggers that activate depending on how the user interacts with the experience</td>
+		<td></td>
+	</tr>
+</table>
+
+<h3>It was decided that this was a suitable web solution for the issue we are trying to solve.</h3>
 
 <footer>
 	<div class="footertext">
