@@ -1,6 +1,6 @@
 /* Customization of the header at the top of the website */
 header {
-	background-color: #fff;
+	background-color: #e8f2ff;
 	padding: 5px;
 	justify-content: space-between;
 }
@@ -14,7 +14,7 @@ header {
 
 /* Customization of the site as a whole */
 body {
-	background-color: #fff;
+	background-color: #fbfdff;
 	font-family: helvetica, arial, sans-serif;
 	margin: 0;
 }
