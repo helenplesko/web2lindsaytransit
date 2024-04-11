@@ -387,4 +387,24 @@ footer {
 	font-family: helvetica, arial, sans-serif;
 }
 
+/* Table inspiration: https://www.w3schools.com/css/css_table_style.asp */
+/* Customization of table */
+table {
+	align-items: center;
+	padding-right: 10%;
+	padding-left: 10%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+/* Customization of table columns */
+th, td {
+  border: 2px solid #004AAD;
+  width: 50%;
+}
+/* Customization of table header */
+th {
+	color: #fff;
+	background-color: #004AAD;
+}
 
