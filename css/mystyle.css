@@ -377,10 +377,11 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 85%;
+	font-size: 30px;
 }
-.pageintro h2 {
-    font-size: 30px;
-}
+
+    
+
 
 /* Customization of footer background */
 footer {
@@ -419,5 +420,12 @@ th {
 	color: #fff;
 	background-color: #004AAD;
 }
-
+.text{
+	text-align: center;
+    color:rgb(206, 120, 7);
+}
+.output5{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
 
