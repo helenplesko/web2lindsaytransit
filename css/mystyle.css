@@ -272,7 +272,17 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
-
+.builder p{
+    display: block;
+    margin-left: 100px;
+}
+.builder a{
+	display: block;
+	padding-left: 47.5%;
+	text-decoration: none;
+	background-color: hotpink;
+	width: 100%;
+}
 /* Responsive design if the browser window is 600px or smaller */
 @media screen and (max-width: 600px) {
 	/* Customization of home-banner h1 element */
