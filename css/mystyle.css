@@ -222,7 +222,7 @@ h3 {
 }
 
 /* Customization of paragraph text */
-p, ul {
+p, ul, ol {
 	color: #000;
 	text-align: left;
 	font-weight: normal;
