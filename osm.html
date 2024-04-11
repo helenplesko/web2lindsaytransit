@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>AHRS Transportation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/mystyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+	
+<body>
+<header>
+	<!-- When you click the top banner or logo, it will link back to the homepage -->
+	<!-- Logo created by Helen in Canva -->
+	<a href = "index.html">
+		<div class="logo">
+			<img src= "images/ahrslogosmall.png" alt="AHRS Transportation Logo">
+		</div>
+	</a>
+</header>
+
+<!-- --------------------
+- Edited By:	Helen Plesko
+- Date:		April 10, 2024
+- Section:	NAVIGATION BAR
+- Inspired By: 	Craig and Lori, from https://helenplesko.github.io/a3web/
+				https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+               	https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp
+				https://www.w3schools.com/howto/howto_css_menu_icon.asp
+--------------------- -->
+<!-- This NavBar will appear on every page of our website -->
+<!-- The NavBar will adjust itself using responsive design depending on the user's device -->
+<div class="navbar" id="myNav">
+	<!-- Creating a div to store the hamburger menu icon with a function that run when the user clicks the icon -->
+	<div class="hamburger" onclick="responsiveNav(this)">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	  </div>
+	<a href="index.html">Home</a>  
+	<a href="solution.html">Solution</a>
+	<div class="dropdown">
+		<button class="dropbtn">Attempts</button>
+		<!-- Attempts dropdown menu content -->
+		<div class="dropdown-content">
+			<a href="dashboard.html">ArcGIS Dashboard</a>
+			<a href="sdk.html">SDK</a>
+			<a href="leaflet.html">Leaflet</a>
+			<a href="osm.html" class="active">OSM</a>
+			<a href="mapbox.html">Mapbox</a>
+		</div> 
+	</div>
+	<a href="futureconsiderations.html">Future Considerations</a>
+	<a href="team.html">Team</a>
+</div>
+
+<!-- JS script for hamburger menu animation and responsive navbar -->
+<script src="js/javascript.js"></script>
+
+<div class="banner">
+	<h1>Attempt 3: Leaflet<h1>
+</div>
+
+<hr class="rounded">
+
+<div class="pageintro">
+    <h2>We tried to solve the problem using an open-source solution, OSM. Here's what we found:</h2>
+</div>
+
+<h3>Step 1: Download Leaflet</h3>
+
+<hr class="rounded">
+
+<h3>TAKE AWAYS</h3>
+
+<table>
+	<tr>
+		<th>Advantages</th>
+		<th>Disadvantages</th>
+	</tr>
+	<tr>
+		<td>Collaborative, any changes you make go live for everyone when saved</td>
+		<td>The imagery of the basemap changes depending on the zoom</td>
+	</tr>
+	<tr>
+		<td>Very user-friendly</td>
+		<td>The buildings and roads don't completely line up, which can be problematic for transit routing</td>
+	</tr>
+	<tr>
+		<td>Can edit the map in-browser, without having to download anything</td>
+		<td>Cannot do further analysis through OSM, just adding and editing features</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>The data exported isn't just a simple shapefile, more conversions required</td>
+	</tr>
+</table>
+
+<h3>It was decided that this was not a suitable web solution for the issue we are trying to solve.</h3>
+
+<footer>
+	<div class="footertext">
+		<p>GEOM99 Web GIS Development | Sir Sandford Fleming College | Winter 2024</p>
+		<p>Copyright 2024 AHRS Transporation</p>
+	</div>
+</footer>
+
+</body>
+</html>
