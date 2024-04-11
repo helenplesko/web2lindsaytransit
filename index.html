@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>AHRS Transportation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/mystyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+	
+<body>
+<header>
+	<!-- When you click the top banner or logo, it will link back to the homepage -->
+	<!-- Logo created by Helen in Canva -->
+	<a href = "index.html">
+		<div class="logo">
+			<img src= "images/ahrslogosmall.png" alt="AHRS Transportation Logo">
+		</div>
+	</a>
+</header>
+
+<!-- --------------------
+- Edited By:	Helen Plesko
+- Date:		April 10, 2024
+- Section:	NAVIGATION BAR
+- Inspired By: 	Craig and Lori, from https://helenplesko.github.io/a3web/
+				https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+               	https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp
+				https://www.w3schools.com/howto/howto_css_menu_icon.asp
+--------------------- -->
+<!-- This NavBar will appear on every page of our website -->
+<!-- The NavBar will adjust itself using responsive design depending on the user's device -->
+<div class="navbar" id="myNav">
+	<!-- Creating a div to store the hamburger menu icon with a function that run when the user clicks the icon -->
+	<div class="hamburger" onclick="responsiveNav(this)">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	  </div>
+	<a href="index.html" class="active">Home</a>
+	<a href="solution.html">Solution</a>
+	<div class="dropdown">
+		<button class="dropbtn">Attempts</button>
+		<!-- Attempts dropdown menu content -->
+		<div class="dropdown-content">
+			<a href="dashboard.html">ArcGIS Dashboard</a>
+			<a href="sdk.html">SDK</a>
+			<a href="leaflet.html">Leaflet</a>
+		</div> 
+	</div>
+	<a href="futureconsiderations.html">Future Considerations</a>
+	<a href="team.html">Team</a>
+</div>
+
+<!-- JS script for hamburger menu animation and responsive navbar -->
+<script src="js/javascript.js"></script>
+
+<div class="banner">
+	<h1>Public Transit Routing in Lindsay, Ontario</h1>
+</div>
+
+<hr class="rounded">
+
+<!-- Problem Statement Section -->
+<div class="problemstatement">
+	<h2>Problem Statement</h2>
+	
+	<h3>Ideal</h3>
+	<p>A user-friendly public web application that will help the general public navigate around Lindsay, Ontario, by public transportation.</p>
+	
+	<h3>Reality</h3>
+	<p>Members of the rural community like Lindsay do not have quick access to public transit routes on common navigation apps like Google Maps. </p>
+	
+	<h3>Consequences</h3>
+	<p>User error may include the public getting lost or missing their bus stop. The study area for this project is Lindsay, Ontario, however, the application can be adapted at a later date to consider other areas without public transportation maps. </p>
+	
+	<h3>Proposal</h3>
+	<p>Finding technologies that are required to make a user-friendly public web application that will help the general public navigate rural areas like Lindsay through public transportation.</p>
+	
+	<h3>Technology Used</h3>
+	<p>ArcGIS Hub, ArcGIS Experience Builder, ArcGIS Online, Open Source</p>
+</div>
+
+<hr class="rounded">
+
+<div class="teamintro">
+    <h2>Four GIS students at Fleming College hoping to make taking public transit in Lindsay, Ontario, easier for everyone.</h2>
+</div>
+	
+<div class="row">
+	<div class="column">
+		<h3>Athulya Sabu</h3>
+		<a href="mailto:athulya.sabu@flemingcollege.ca" class="fas fa-envelope" title="Athulya's Fleming email" target="_blank"></a>
+		<a href="https://twitter.com/" class="fab fa-linkedin" title="Athulya's LinkedIn page" target="_blank"></a>
+	</div>
+	<div class="column">
+		<h3>Helen Plesko</h3>
+		<a href="mailto:helen.plesko@flemingcollege.ca" class="fas fa-envelope" title="Helen's Fleming email" target="_blank"></a>
+		<a href="https://www.linkedin.com/in/helenplesko/" class="fab fa-linkedin" title="Helen's LinkedIn page" target="_blank"></a>
+	</div>
+	<div class="column">
+		<h3>Rahul Saravanabavan</h3>
+		<a href="mailto:rahul.saravanabavan@flemingcollege.ca" class="fas fa-envelope" title="Rahul's Fleming email" target="_blank"></a>
+		<a href="https://www.linkedin.com/in/rahulsaravanabavan/" class="fab fa-linkedin" title="Rahul's LinkedIn page" target="_blank"></a>
+	</div>
+	<div class="column">
+		<h3>Sharmila Wagle</h3>
+		<a href="mailto:sharmila.wagle@flemingcollege.ca" class="fas fa-envelope" title="Sharmila's Fleming email" target="_blank"></a>
+		<a href="https://www.linkedin.com/in/sharmila-wagle/" class="fab fa-linkedin" title="Sharmila's LinkedIn page" target="_blank"></a>
+	</div>
+</div>
+
+<footer>
+	<div class="footertext">
+		<p>GEOM99 Web GIS Development | Sir Sandford Fleming College | Winter 2024</p>
+		<p>Copyright 2024 AHRS Transporation</p>
+	</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>AHRS Transportation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/mystyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+	
+<body>
+<header>
+	<!-- When you click the top banner or logo, it will link back to the homepage -->
+	<!-- Logo created by Helen in Canva -->
+	<a href = "index.html">
+		<div class="logo">
+			<img src= "images/ahrslogosmall.png" alt="AHRS Transportation Logo">
+		</div>
+	</a>
+</header>
+
+<!-- --------------------
+- Edited By:	Helen Plesko
+- Date:		April 10, 2024
+- Section:	NAVIGATION BAR
+- Inspired By: 	Craig and Lori, from https://helenplesko.github.io/a3web/
+				https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+               	https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp
+				https://www.w3schools.com/howto/howto_css_menu_icon.asp
+--------------------- -->
+<!-- This NavBar will appear on every page of our website -->
+<!-- The NavBar will adjust itself using responsive design depending on the user's device -->
+<div class="navbar" id="myNav">
+	<!-- Creating a div to store the hamburger menu icon with a function that run when the user clicks the icon -->
+	<div class="hamburger" onclick="responsiveNav(this)">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	  </div>
+	<a href="index.html">Home</a>  
+	<a href="solution.html">Solution</a>
+	<div class="dropdown">
+		<button class="dropbtn">Attempts</button>
+		<!-- Attempts dropdown menu content -->
+		<div class="dropdown-content">
+			<a href="dashboard.html">ArcGIS Dashboard</a>
+			<a href="sdk.html">SDK</a>
+			<a href="leaflet.html" class="active">Leaflet</a>
+		</div> 
+	</div>
+	<a href="futureconsiderations.html" class="active">Future Considerations</a>
+	<a href="team.html">Team</a>
+</div>
+
+<!-- JS script for hamburger menu animation and responsive navbar -->
+<script src="js/javascript.js"></script>
+
+<div class="banner">
+	<h1>Future Considerations<h1>
+</div>
+
+<hr class="rounded">
+
+<div class="pageintro">
+    <h2>Public transit is very important, especially in a place like Lindsay, where Fleming College is located. Hundreds of international students navigate through the city every year, even in extreme weather conditions. 
+Even though there are good public transit services available, there is not a proper way to access these services like using Google Maps. 
+We, as students, have tried to make these services more accessible but due to time, skillsets, and course scope restrictions, there are still a lot of things that can be improved.</h2>
+</div>
+
+<h3>Future Considerations</h3>
+<ul>
+	<li>Data acquisition can be done for updated data since the only available data was from 2020.</li>
+	<li>A network can be created for the Lindsay Transit and Network Analysis can be used which will save ArcGIS credits for Routing.</li>
+	<li>Tracking the live locations of buses can give up-to-date informations to the user.</li>
+	<li>The City of Kawartha Lakes can make the updated dataset available in GeoHub with the added and removed bustops informations like they do on their webpage.</li>
+	<li>Users can use the survey of our web solution to provide feedback for updates and their experiences so the designs can be customized and upgraded.</li>
+	<li>The bus can use the GPS services so that the live updates can be incorporated into the web solution so that the users can track the status of the bus.</li>
+	<li>Incorporate in the web solution more information about accessibility services. This may include buses that have bike racks, wheelchair ramps, or bus shelters.</li>
+</ul>
+
+<h3>Inspirational Public Transit Websites</h3>
+<ul>
+  <li>Toronto Transit Commission (TTC): https://www.ttc.ca/</li>
+  <li>Metrolinx GO Transit: https://www.gotransit.com/en</li>
+  <li>Mississauga's MiWay: https://www.mississauga.ca/miway-transit/</li>
+</ul>
+
+<footer>
+	<div class="footertext">
+		<p>GEOM99 Web GIS Development | Sir Sandford Fleming College | Winter 2024</p>
+		<p>Copyright 2024 AHRS Transporation</p>
+	</div>
+</footer>
+
+</body>
+</html>
