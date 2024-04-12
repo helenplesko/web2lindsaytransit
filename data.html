@@ -38,8 +38,8 @@
 		<div class="bar3"></div>
 	  </div>
 	<a href="index.html">Home</a>  
-	<a href="solution.html" class="active">Solution</a>
-	<a href="data.html">Data Source</a>
+	<a href="solution.html">Solution</a>
+	<a href="data.html" class="active">Data Source</a>
 	<div class="dropdown">
 		<button class="dropbtn">Attempts</button>
 		<!-- Attempts dropdown menu content -->
@@ -58,73 +58,77 @@
 <!-- JS script for hamburger menu animation and responsive navbar -->
 <script src="js/javascript.js"></script>
 
-<div class="banner">
-	<h1>Our Solution<h1>
-</div>
+<h1>Data Source<h1>
 
 <hr class="rounded">
 
 <div class="pageintro">
-    <h2>This page has the data source we collected and what we have processed to get the data to AGOL</h2>
+    <h2>This page has the data source we collected and what we have processed to get the data to AGOL.</h2>
 </div>
+
+<hr class="rounded">
+
 <div class="builder">
-	<h3> GTFS Data</h3>
 
-	<p> • First to know about the routing features we should know about the raw data we collected this acts as the data tier for us 
-		and the middle and web tier would be the ESRI Experience builder.</p>
+	<h3>GTFS Data</h3>
 
-	<p> • Generalized transit feed specification is the general form for transit data along the world which includes stops, schedules, 
-		routes (shape). My dataset contains, trips, stops, stop times, shapes, routes, feed info, calendar dates, agency, all these in txt file.</p>
+	<div class="buttoncontainer">
+		<a href="https://gtfs.org/" class="viewbutton" target="_blank">View GTFS Data Source</a>
+	</div>
+
+	<p>First to know about the routing features we should know about the raw data we collected. This acts as the data tier for us 
+		and the middle and web tier would be the Esri Experience Builder.</p>
+
+	<p>Generalized Transit Feed Specification (GTFS) is the general form for transit data around the world which includes stops, schedules, and
+		routes (shape). The dataset we downloaded contains trips, stops, stop times, shapes, routes, feed info, calendar dates, agency, all these in txt file.</p>
 		
-	<p>• The preprocessing includes converting the point features such as stops and routes to their respective features. </p>
+	<p>The preprocessing includes converting the point features such as stops and routes to their respective features.</p>
 
-	<p>• Pro environment has a toolbox specific to transit data that is Public transit toolbox. Firstly converted stops.txt file to stops in map. 
-		Followed by converting the shapes to line features representing the routes. This was executed by GFTS stops to features and GFTS shapes to features tools respectively.</p>
+	<p>The ArcGIS Pro environment has a toolbox specific to transit data that is Public Transit toolbox. Firstly, we converted stops.txt file to stops in map. 
+		Next, we converted the shapes to line features that represent the routes. This was executed by GFTS stops to features and GFTS shapes to features tools respectively.</p>
 		
-	<h3> Methodology:</h3>
+	<h3>Methodology</h3>
 
-	<p> • GFTS stops to features: From the stops text file converting the point features as stops in the pro environment. 
+	<p>GTFS stops to features: From the stops text file converting the point features as stops in the pro environment. 
 		These are the updated stops as per 2023. </p>
 	
 	<img src="images/gtfs1.png" alt="point features for stops">
 
 
-	<p> • GTFS shapes to Features: Converting the shape text file to their corresponding line feature that is route features and 
+	<p>GTFS shapes to Features: Converting the shape text file to their corresponding line feature that is route features and 
 		segregating them into 4 transit routes, since Lindsay has 4 routes namely green, red, orange, blue.</p>
 
 	<img src="images/gtfs2.png" alt="line feature for the routes">
 
-	<p> • GFTS to public transit data model: This is a specific model the ESRI has for processing the transit data to convert them into the data preferred by them. 
+	<p>GFTS to public transit data model: This is a specific model the ESRI has for processing the transit data to convert them into the data preferred by them. 
 		This helps in further processing the to catch the buffer area and analysing the extent of each stops.</p>
 
 	<img src="images/gtfs3.png" alt="transit data model">
 
-	<p> • Enrich tool: Next step will be using the enrich tool to populate the polygon data with the population data </p>
+	<p>Enrich tool: Next step will be using the enrich tool to populate the polygon data with the population data </p>
 
 	<img src="images/gtfs4.png" alt="enriched surface">
 
-	<p> • Calculate transit function frequency: This tool calculates the frequency of the transit bus, 
+	<p>Calculate transit function frequency: This tool calculates the frequency of the transit bus, 
 		that is how frequent is the buss service in that stop, since Lindsay we have only one hour once bus service.</p>
 
-	<p> • While calculating the frequency hours I have to insert parameters that is 60 minutes interval since Lindsay transit stops 
+	<p>While calculating the frequency hours I have to insert parameters that is 60 minutes interval since Lindsay transit stops 
 		frequency operates one hour once. </p>
 	
 	<img src="images/gtfs5.png" alt="frequency model">
 
-	<p> We thoughtthis tool failed because of the prefix I did there is no AMRush in Lindsay transit stop so deleting that and running the tool again to see the possible outcomes.
+	<p>We thoughtthis tool failed because of the prefix I did there is no AMRush in Lindsay transit stop so deleting that and running the tool again to see the possible outcomes.
 		Sharing the data to AGOL, as far as I completed the process and I have reached the time limit for this processing so uploading each layers in to AGOL. 
 		Right click each layer > sharing > share as a web layer.
 	</p>
 
 	<img src="images/gtfs6.png" alt="dont do">
 
-	<p> NOTE: Don't ever pre process the GFTS data other than if your going to do a network analysis for the transit dataset. 
-		These items are waste of our time for one week which we are not using in any of our project.   </p>
-
-	<p> • Rather than this, import the files into the AGOL, since this data set is in text format convert them into csv files and import them into the AGOL as features.</p>
+	<p>NOTE: Don't ever pre-process the GFTS data other than if your going to do a network analysis for the transit dataset. 
+		These items are waste of our time for one week which we are not using in any of our project. Rather than this, import the files into the AGOL, since this data set is in text format convert them into csv files and import them into the AGOL as features. </p>
 </div>
 
-<h3>It was decided that this was a suitable web solution for the issue we are trying to solve.</h3>
+<h3>It was decided that this was not a suitable web solution for the issue we are trying to solve.</h3>
 
 <footer>
 	<div class="footertext">
