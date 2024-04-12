@@ -38,8 +38,8 @@
 		<div class="bar3"></div>
 	  </div>
 	<a href="index.html">Home</a>  
-	<a href="solution.html" class="active">Solution</a>
-	<a href="data.html">Data Source</a>
+	<a href="solution.html">Solution</a>
+	<a href="data.html" class="active">Data Source</a>
 	<div class="dropdown">
 		<button class="dropbtn">Attempts</button>
 		<!-- Attempts dropdown menu content -->
@@ -59,63 +59,91 @@
 <script src="js/javascript.js"></script>
 
 <div class="banner">
-	<h1>Our Solution<h1>
-</div>
+	<h1>Data Source</h1>
+</div>	
 
 <hr class="rounded">
 
 <div class="pageintro">
-    <h2>This page has the data source we collected and what we have processed to get the data to AGOL</h2>
+    <h2>This page has the data source we collected and what we have processed to get the data to AGOL.</h2>
 </div>
-<div class="builder">
-	<h3> GTFS Data</h3>
-	<a href="https://gtfs.org/">GTFS data</a>
 
-	<p> • First to know about the routing features we should know about the raw data we collected this acts as the data tier for us 
-		and the middle and web tier would be the ESRI Experience builder.</p>
+<hr class="rounded">
 
-	<p> • General Transit Feed Specifications are the raw data for all the transits along the world, this is a common form of transit data which can be shared among the stake holders and 
-		it contains all the necessary data which we want to represent a routing feature.
+<div class="content">
+
+	<h3>GTFS Data</h3>
+
+	<div class="buttoncontainer">
+		<a href="https://gtfs.org/" class="viewbutton" target="_blank">View GTFS Data Source</a>
+	</div>
+
+	<p>First to know about the routing features we should know about the raw data we collected. This acts as the data tier for us 
+		and the middle and web tier would be the Esri Experience Builder.</p>
+
+	<p>Generalized Transit Feed Specification (GTFS) is the general form for transit data around the world which includes stops, schedules, and
+		routes (shape). The dataset we downloaded contains trips, stops, stop times, shapes, routes, feed info, calendar dates, agency, all these in txt file.</p>
+		
+	<p>The preprocessing includes converting the point features such as stops and routes to their respective features.</p>
+
+	<p>The ArcGIS Pro environment has a toolbox specific to transit data that is Public Transit toolbox. Firstly, we converted stops.txt file to stops in map. 
+		Next, we converted the shapes to line features that represent the routes. This was executed by GFTS stops to features and GFTS shapes to features tools respectively.</p>
+		
+	<h3>Methodology</h3>
+
+	<p>GTFS stops to features: From the stops text file converting the point features as stops in the pro environment. 
+		These are the updated stops as per 2023. </p>
+	
+	<img src="images/gtfs1.png" alt="point features for stops">
+
+
+	<p>GTFS shapes to Features: Converting the shape text file to their corresponding line feature that is route features and 
+		segregating them into 4 transit routes, since Lindsay has 4 routes namely green, red, orange, blue.</p>
+
+	<img src="images/gtfs2.png" alt="line feature for the routes">
+
+	<p>GFTS to public transit data model: This is a specific model the ESRI has for processing the transit data to convert them into the data preferred by them. 
+		This helps in further processing the to catch the buffer area and analysing the extent of each stops.</p>
+
+	<img src="images/gtfs3.png" alt="transit data model">
+
+	<p>Enrich tool: Next step will be using the enrich tool to populate the polygon data with the population data </p>
+
+	<img src="images/gtfs4.png" alt="enriched surface">
+
+	<p>Calculate transit function frequency: This tool calculates the frequency of the transit bus, 
+		that is how frequent is the buss service in that stop, since Lindsay we have only one hour once bus service.</p>
+
+	<p>While calculating the frequency hours I have to insert parameters that is 60 minutes interval since Lindsay transit stops 
+		frequency operates one hour once. </p>
+	
+	<img src="images/gtfs5.png" alt="frequency model">
+
+	<p>We thought this tool failed because of the prefix I did there is no AMRush in Lindsay transit stop so deleting that and running the tool again to see the possible outcomes.
+		Sharing the data to AGOL, as far as I completed the process and I have reached the time limit for this processing so uploading each layers in to AGOL. 
+		Right click each layer > sharing > share as a web layer.
 	</p>
 
+	<img src="images/gtfs6.png" alt="dont do">
+
+	<p>NOTE: Don't ever pre-process the GFTS data other than if your going to do a network analysis for the transit dataset. 
+		These items are waste of our time for one week which we are not using in any of our project. Rather than this, import the files into the AGOL, since this data set is in text format convert them into csv files and import them into the AGOL as features. </p>
+
+<hr class="rounded">
+
+	<h3>ArcGIS Hub Lindsay Transit Data</h3>
+
+	<p>This ArcGIS Hub for Lindsay Transit Data holds the shapefiles for bus routes and bus stops provided from the City of Kawartha Lakes. 
+		It also includes a static transit map. Unfortunately, this data is not up-to-date, as it does not include the newest route, Orange Line, which was added in February 2023. 
+		Due to the timeline and nature of this project, we thought it would be most efficient to use this data since it is already in shapefile format, ready for us to bring into Esri products.
+		Thus, for future reference, updated data must be acquired for it to be of use to the public. View the data by clicking the button below.
+	</p>
+
+	<div class="buttoncontainer">
+		<a href="https://hub.arcgis.com/documents/ca68660b0e3e47a09a667d2f0963df99/about" class="viewbutton" target="_blank">ArcGIS Hub Lindsay Transit Data</a>
+	</div>
+
 </div>
-
-<table>
-	<tr>
-		<th>Advantages</th>
-		<th>Disadvantages</th>
-	</tr>
-	<tr>
-		<td>Many templates to choose from</td>
-		<td>Can be time consuming to create</td>
-	</tr>
-	<tr>
-		<td>Tied to AGOL organization account</td>
-		<td>Moving items around the page can be finicky</td>
-	</tr>
-	<tr>
-		<td>Can customize the theme/look</td>
-		<td>Cannot easily move the published experiences between accounts</td>
-	</tr>
-	<tr>
-		<td>No coding involved</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>It will automatically update for different screen sizes</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Can integrate with other apps, like Dashboards and Surveys</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>Can add triggers that activate depending on how the user interacts with the experience</td>
-		<td></td>
-	</tr>
-</table>
-
-<h3>It was decided that this was a suitable web solution for the issue we are trying to solve.</h3>
 
 <footer>
 	<div class="footertext">

@@ -197,6 +197,7 @@ h1 {
 	padding-right: 10px;
 	margin-top: 5px;
 	padding-top: 20px;
+	
 }
 
 /* Customization of Header 2 */
@@ -275,13 +276,6 @@ img {
 .builder p{
     display: block;
     margin-left: 100px;
-}
-.builder a{
-	display: block;
-	padding-left: 47.5%;
-	text-decoration: none;
-	background-color: hotpink;
-	width: 100%;
 }
 /* Responsive design if the browser window is 600px or smaller */
 @media screen and (max-width: 600px) {
@@ -429,3 +423,32 @@ th {
 	padding-bottom: 10px;
 }
 
+/* inspiration: https://www.w3schools.com/css/css3_buttons.asp */
+/* Customization of the button container */
+.buttoncontainer {
+	margin: 0 5px 25px;
+	background-color: transparent;
+	display: flex;
+	text-align: center;
+}
+/* Customization on the viewbutton */
+.viewbutton {
+	background-color: #004AAD;
+	border: none;
+	color: white;
+	padding: 20px 10px;
+	justify-content: center;
+	text-decoration: none;
+	display: flex;
+	font-size: 18px;
+	flex-basis: 100%;
+	margin-left: 20%;
+	margin-right: 20%;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+}
+/* Adding a hover on the viewbutton */
+.viewbutton:hover {
+	background-color: #6692cd;
+	transition: 0.3s;
+}
