@@ -39,12 +39,13 @@
 	  </div>
 	<a href="index.html">Home</a>  
 	<a href="solution.html" class="active">Solution</a>
+	<a href="data.html">Data Source</a>
 	<div class="dropdown">
 		<button class="dropbtn">Attempts</button>
 		<!-- Attempts dropdown menu content -->
 		<div class="dropdown-content">
 			<a href="dashboard.html">ArcGIS Dashboard</a>
-			<a href="sdk.html">SDK</a>
+			<a href="sdk.html">ArcGIS Maps SDK</a>
 			<a href="leaflet.html">Leaflet</a>
 			<a href="osm.html">OSM</a>
 			<a href="mapbox.html">Mapbox</a>
@@ -67,10 +68,12 @@
     <h2>After lots of trial and error, we have found that Esri's ArcGIS Experience Builder is the best technology for a user-friendly public web application that will help people living and visiting Lindsay, Ontario, navigate around the city via public transit. Here's our methodology to create our final solution:</h2>
 </div>
 
+<hr class="rounded">
+
 <div class="builder">
 	<h3>Step 1: Create an experience</h3>
 
-	<p>Create an experience builder using the ArcGIS online component from the menu button. Click the Experience Builder app.</p>
+	<p>Create an Experience using the ArcGIS Online component from the menu button. Click the Experience Builder app.</p>
 	<img src="images/Template.png" alt="image of the experience builder">
 
 	<p>Create a new Experience using the "Create New" button on the top righthand side.</p>
@@ -87,42 +90,65 @@
 	<p>After adding the data, you will see the stops and routes of the Lindsay transit in the application. 
 		This routes features are what we created from the GTFS and Ontario GeoHub transit data.</p>
 	<img src="images/template4.png" alt="Routes of Lindsay">
-		<p> NOTE: Don't use the routing widget from the Experience builder as this requires credits and request per head. This is a useless function on this point.</p>
 
-	<img src="images/route.png" alt="routing features">
+	<p> NOTE: Don't use the routing widget from the Experience builder as this requires credits and request per head. This is a useless function on this point.</p>
+	<img src="images/route.png" alt="routing features1">
 
 	<p> This causes a error at the final product this is the screen shot of that which we coundn't make that work.</p>
+	<img src="images/routing.png" alt="routing features2">
 
-	<img src="images/routing.png" alt="routing features">
+	<h3>Step 3: Embed ArcGIS Dashboard</h3>
 
-	<h3>Step 3: Add splash page</h3>
+	<p>Using an "Embed" widget, Sharmila's ArcGIS Dashboard was embedded into the experience via a URL. You may be prompted to sign in to ArcGIS Online to view the Dashboard.</p>
+	<img src="images/EBEmbed1.png" alt="embedding dashboard">
+
+	<h3>Step 4: Add splash page</h3>
 
 	<p>In the editing interface of the Experience Builder, click the page icon on the upper lefthand side of the sidebar.
 		Click Window to switch to viewing all the windows within the experience. Click the + icon on the window to add a window.
 	</p>
+	<img src="images/EBSplash0.png" alt="add splash page">
 
-	<p>Scroll down and choose your layout of choice of this window. I chose the Simple version.</p>
-	
+	<p>Scroll down and choose your layout of choice of this window. I chose the Simple version. Give it a name and then click "Set as splash" icon next to the name.</p>
+
 	<p>Add an image and text. On our splash page, we wanted to include an image of the routes and also text indicating what the purpose of the experience is. 
 		Since this experience was for exploration purposes and the data needs some fine tuning, we added a disclaimer at the bottom. 
-		User must accept the terms and conditions in order to view the experience.</p>
+		User must accept the terms and conditions in order to view the experience.
+		Customize the user experience with the splash page via the window on the righthand side.
+	</p>
+	<img src="images/EBSplash4.png" alt="splash page customization">
 
-	<p>On the righthand side, customize how the user sees and interacts with the splash page.</p>
-		<ul>
-			<li>fixed mode</li>
-			<li>center position</li>
-			<li>block page</li>
-			<li>alter the text size</li>
-			<li>for Close options:
-				<ul>
-					<li>always show the window</li>
-					<li>add type confirmation</li>
-					<li>choose the style</li>
-				</ul>
-			</li>
-		</ul>
+	<p>Now, when the experience is visited, this splash page will open up. 
+		If the user does not accept terms and conditions, the checkbox will flash red, and they will not be able to see the experience until they click it. 
+		If the user does accept the terms and conditions, they will see the experience.
+	</p>
+	<img src="images/EBSplash3.png" alt="splash page">
+
+	<h3>Step 5: Add the Near Me widget</h3>
+
+	<p>Click and drag the map centric "Map" widget to the experience interface and connect it to the Lindsay map added earlier. 
+		Then click and drag the map centric "Near Me" widget to the experience interface and connect it to the map that was just added.</p>
+
+	<p>Customize the Near Me widget using the settings below.</p>
+	<img src="images/EBNearMe1.png" alt="near me widget custom">
+
+	<p>Arrange both widgets where you see fit.</p>
+	<img src="images/EBNearMe2.png" alt="experience with near me widget">
+
+	<h3>Step 6: Review the Solution</h3>
+
+	<p>After reviewing the solution, it was decided that the Dashboard was redundant. 
+		It was visually appealing, but limited the interaction the user can have with the experience. 
+		It also made the page look crowded. Therefore, it was removed.
+		The tables from the Dashboard were added to the remaining space. This includes the table with Lindsay fare information and bus route schedules.
+	</p>
+	<img src="images/EBNearMe3.png" alt="near me without dashboard">
 
 </div>
+
+<hr class="rounded">
+
+<h3>TAKE AWAYS</h3>
 
 <table>
 	<tr>
@@ -142,12 +168,12 @@
 		<td>Cannot easily move the published experiences between accounts</td>
 	</tr>
 	<tr>
-		<td>No coding involved</td>
-		<td></td>
+		<td>No coding/programming involved</td>
+		<td>Developed and maintained by Esri, which means the creator has to rely on Esri for updates, support, and compatibility with new technologies</td>
 	</tr>
 	<tr>
 		<td>It will automatically update for different screen sizes</td>
-		<td></td>
+		<td>The data needs to be updated - the bus stops do not match the routes and the scheduled times are not accurate</td>
 	</tr>
 	<tr>
 		<td>Can integrate with other apps, like Dashboards and Surveys</td>
@@ -157,9 +183,13 @@
 		<td>Can add triggers that activate depending on how the user interacts with the experience</td>
 		<td></td>
 	</tr>
+	<tr>
+		<td>User can interact with the page using the zoom features on the map, search features on the tables, and location feature on the near me widget</td>
+		<td></td>
+	</tr>
 </table>
 
-<h3>It was decided that this was a suitable web solution for the issue we are trying to solve.</h3>
+<h3>Although there are some tweaks that can make the experience better, it was decided that this was a suitable web solution for the issue we are trying to solve.</h3>
 
 <footer>
 	<div class="footertext">
