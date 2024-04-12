@@ -266,17 +266,6 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 }	
-.builder img{
-	width:624px;
-	height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.builder p{
-    display: block;
-    margin-left: 100px;
-}
 /* Responsive design if the browser window is 600px or smaller */
 @media screen and (max-width: 600px) {
 	/* Customization of home-banner h1 element */
@@ -373,9 +362,6 @@ img {
     width: 85%;
 	font-size: 30px;
 }
-
-    
-
 
 /* Customization of footer background */
 footer {
